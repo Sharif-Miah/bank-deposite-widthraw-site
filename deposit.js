@@ -14,9 +14,17 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
 
     depositAmountElement.innerText = totalAmount;
 
+    // overall Total Sum 
 
+    const ovarAll = document.getElementById('overl-total');
 
+    const ovarAllString = ovarAll.innerText;
 
+    const ovarAllBalance = parseFloat(ovarAllString);
+
+    const overAllTotal = ovarAllBalance + nwetotalAmount;
+
+    ovarAll.innerText = overAllTotal;
 
 
 
