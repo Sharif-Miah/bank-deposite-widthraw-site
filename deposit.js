@@ -27,10 +27,42 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
     ovarAll.innerText = overAllTotal;
 
 
-
-
-
-
     depositInputElement.value = '';
 
 })
+
+
+
+// WidthDraw work start 
+
+
+document.getElementById('withdraw-btn').addEventListener('click', function () {
+
+    const withdrawInputElement = document.getElementById('withdraw-input');
+    const withdrawInput = parseFloat(withdrawInputElement.value);
+
+    const withDrawAmountmoney = document.getElementById('withdraw-amount');
+    const withDrawAmount = parseFloat(withDrawAmountmoney.innerText);
+
+    const totalWithdrawAmont = withdrawInput + withDrawAmount;
+
+
+    withDrawAmountmoney.innerText = totalWithdrawAmont;
+
+
+
+    // overall Total decretion 
+
+    const ovarAll = document.getElementById('overl-total');
+    const ovarAllString = ovarAll.innerText;
+    const ovarAllBalance = parseFloat(ovarAllString);
+
+    const mainBalance = ovarAllBalance - withdrawInput;
+
+    ovarAll.innerText = mainBalance;
+
+    withdrawInputElement.value = '';
+
+})
+
+
